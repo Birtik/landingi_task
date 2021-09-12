@@ -24,7 +24,7 @@ class UsersControllerTest extends WebTestCase
             method: 'POST',
             uri: '/users',
             parameters: ['email' => $email],
-            server: ['API_KEY' => '7e4a903f-d206-4fd0-91d4-7d2464a1f80e'],
+            server: [],
         );
         self::assertResponseIsSuccessful();
     }

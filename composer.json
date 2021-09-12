@@ -11,7 +11,7 @@
     ],
     "config": {
         "preferred-install": {
-            "*": "source"
+            "*": "dist"
         },
         "sort-packages": true
     },

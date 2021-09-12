@@ -20,7 +20,15 @@ class User implements \JsonSerializable
     private int $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @ORM\Embedded(class="RecruitmentApp\Domain\Email", columnPrefix=false)
      */
     private Email $email;
 

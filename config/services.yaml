@@ -20,3 +20,6 @@ services:
 
     RecruitmentApp\Infrastructure\:
         resource: '../src/Infrastructure/'
+
+    RecruitmentApp\Domain\:
+        resource: '../src/Domain/'

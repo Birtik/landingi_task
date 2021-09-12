@@ -228,6 +228,9 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "symfony/amqp-messenger": {
+        "version": "v5.3.7"
+    },
     "symfony/contracts": {
         "version": "v2.4.0"
     },
@@ -244,6 +247,18 @@
         },
         "files": [
             ".env"
+        ]
+    },
+    "symfony/messenger": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "25e3c964d3aee480b3acc3114ffb7940c89edfed"
+        },
+        "files": [
+            "config/packages/messenger.yaml"
         ]
     },
     "symfony/phpunit-bridge": {
@@ -294,11 +309,27 @@
     "symfony/polyfill-uuid": {
         "version": "v1.23.0"
     },
+    "symfony/redis-messenger": {
+        "version": "v5.3.7"
+    },
     "symfony/runtime": {
         "version": "v5.3.4"
     },
     "symfony/symfony": {
         "version": "v5.3.7"
+    },
+    "symfony/validator": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "3eb8df139ec05414489d55b97603c5f6ca0c44cb"
+        },
+        "files": [
+            "config/packages/test/validator.yaml",
+            "config/packages/validator.yaml"
+        ]
     },
     "symplify/easy-coding-standard": {
         "version": "9.4.22"

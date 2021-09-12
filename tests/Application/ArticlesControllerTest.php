@@ -1,12 +1,11 @@
-<?php
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Tests\Application;
 
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class UsersControllerTest extends WebTestCase
+class ArticlesControllerTest extends WebTestCase
 {
     private KernelBrowser $client;
 
@@ -15,26 +14,21 @@ class UsersControllerTest extends WebTestCase
         $this->client = self::createClient();
     }
 
-    public function testCreateUser(): void
+    public function testCreateArticle(): void
     {
-        $rand = random_int(1, 100);
-        $email = 'test'.$rand.'@wp.pl';
-
         $this->client->request(
             method: 'POST',
-            uri: '/users',
-            parameters: ['email' => $email],
+            uri: '/articles',
+            parameters: ['title' => 'Super tygodnik2', 'content' => 'lorem'],
             server: ['API_KEY' => '7e4a903f-d206-4fd0-91d4-7d2464a1f80e'],
         );
-        self::assertResponseIsSuccessful();
+        self::assertResponseStatusCodeSame(400);
     }
-
-    public function deleteUser(): void
+    public function testGetArticles(): void
     {
         $this->client->request(
-            method: 'POST',
-            uri: '/users',
-            parameters: ['email' => 'test@wp.pl'],
+            method: 'GET',
+            uri: '/articles',
             server: ['API_KEY' => '7e4a903f-d206-4fd0-91d4-7d2464a1f80e'],
         );
         self::assertResponseStatusCodeSame(400);

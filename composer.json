@@ -11,7 +11,7 @@
     ],
     "config": {
         "preferred-install": {
-            "*": "dist"
+            "*": "source"
         },
         "sort-packages": true
     },
@@ -23,6 +23,7 @@
         "ext-json": "*",
         "ext-openssl": "*",
         "composer/package-versions-deprecated": "1.11.99.3",
+        "doctrine/annotations": "^1.13",
         "doctrine/doctrine-bundle": "^2.4",
         "doctrine/doctrine-migrations-bundle": "^3.1",
         "doctrine/migrations": "^3.2",
@@ -33,12 +34,14 @@
         "symfony/dotenv": "5.3.*",
         "symfony/flex": "^1.15",
         "symfony/framework-bundle": "5.3.*",
+        "symfony/messenger": "5.3.*",
         "symfony/polyfill-ctype": "^1.23",
         "symfony/proxy-manager-bridge": "5.3.*",
         "symfony/runtime": "5.3.*",
         "symfony/security-bundle": "^5.3",
         "symfony/symfony": "^5.3",
         "symfony/uid": "5.3.*",
+        "symfony/validator": "5.3.*",
         "symfony/yaml": "^5.3"
     },
     "require-dev": {
